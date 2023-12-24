@@ -1,0 +1,7 @@
+name = "ens"
+main = "src/index.ts"
+compatibility_date = "2023-11-21"
+
+[[r2_buckets]]
+binding = "ens"
+bucket_name = "ens"
