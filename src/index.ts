@@ -11,14 +11,10 @@ export default {
 function router() {
   const router = Router()
   router.all('/ping', () => new Response('Pong!'))
-
+  router.get('/', () => Response.redirect('https://github.com/chiyoi/ens', 307))
   router.get('/ens/:name/address', resolveName)
-  router.all('/ens/:name/address', () => error(405, 'Endpoint <Resolve Name> is read-only.'))
-
   router.get('/ens/:address/name', getName)
   router.put('/ens/:address/name', withAuth, setName)
-  router.all('/ens/:address/name', () => error(405, 'Endpoint <Address Name> only supports GET and PUT.'))
-
   router.all('*', () => error(404, 'Endpoint not exist.'))
   return router
 }
