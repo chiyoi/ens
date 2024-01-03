@@ -8,7 +8,7 @@ export default {
     .catch(error)
 }
 
-function router() {
+const router = () => {
   const router = Router()
   router.all('/ping', () => new Response('Pong!'))
   router.get('/', () => Response.redirect('https://github.com/chiyoi/ens', 307))
@@ -19,6 +19,6 @@ function router() {
   return router
 }
 
-export interface Env {
+export type Env = {
   ens: R2Bucket,
 }

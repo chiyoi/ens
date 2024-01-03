@@ -8,7 +8,7 @@ const publicClient = createPublicClient({
   transport: http(),
 })
 
-export async function withAuth(request: IRequest, _: Env) {
+export const withAuth = async (request: IRequest, _: Env) => {
   const { params: { address } } = request
   if (!isHex(address)) return error(400, 'Invalid address.')
 
