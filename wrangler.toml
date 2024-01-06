@@ -8,5 +8,9 @@ binding = "ens"
 bucket_name = "ens"
 
 [[routes]]
+pattern = "ens.neko03.moe"
+custom_domain = true
+
+[[routes]]
 pattern = "*neko03.moe/ens/*"
 zone_name = "neko03.moe"
