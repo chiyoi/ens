@@ -1,7 +1,12 @@
 name = "ens"
 main = "src/index.ts"
 compatibility_date = "2023-11-21"
+workers_dev = true
 
 [[r2_buckets]]
 binding = "ens"
 bucket_name = "ens"
+
+[[routes]]
+pattern = "*neko03.moe/ens/*"
+zone_name = "neko03.moe"
